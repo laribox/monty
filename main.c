@@ -8,12 +8,12 @@ pro_v pv = {NULL, NULL, NULL, 0};
 */
 int main(int argc, char *argv[])
 {
+	unsigned int counter = 0;
 	char *content;
-	FILE *file;
 	size_t size = 0;
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
-	unsigned int counter = 0;
+	FILE *file;
 
 	if (argc != 2)
 	{
