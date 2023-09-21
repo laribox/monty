@@ -55,18 +55,18 @@ typedef struct instruction_s
 void push(stack_t **head, unsigned int number);
 void pall(stack_t **head, unsigned int number);
 void pint(stack_t **head, unsigned int number);
-void f_pop(stack_t **head, unsigned int counter);
-void f_swap(stack_t **head, unsigned int counter);
+void pop(stack_t **head, unsigned int counter);
+void swap(stack_t **head, unsigned int counter);
 void add(stack_t **head, unsigned int counter);
-void f_nop(stack_t **head, unsigned int counter);
+void nop(stack_t **head, unsigned int counter);
 
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void free_stack(stack_t *head);
 
-void f_sub(stack_t **head, unsigned int counter);
-void f_div(stack_t **head, unsigned int counter);
-void f_mul(stack_t **head, unsigned int counter);
-void f_mod(stack_t **head, unsigned int counter);
+void sub(stack_t **head, unsigned int counter);
+void div(stack_t **head, unsigned int counter);
+void mul(stack_t **head, unsigned int counter);
+void mod(stack_t **head, unsigned int counter);
 
 
 void addnode(stack_t **head, int n);
