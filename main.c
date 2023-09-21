@@ -1,7 +1,7 @@
 #include "monty.h"
 pro_v pv = {NULL, NULL, NULL, 0};
 /**
-* main - Starting point of the pvgram 
+* main - Starting point of the program
 * @argc: number of arguments
 * @argv: Arguments
 * Return: 0 on success
