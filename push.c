@@ -29,8 +29,5 @@ void push(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
 	n = atoi(pa.arg);
-	if (pa.mode == 0)
-		addnode(head, n);
-	else
-		addqueue(head, n);
+	addnode(head, n);
 }
