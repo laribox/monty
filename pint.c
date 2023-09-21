@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * f_pint - printing the top
- * @head: include stack head
- * @counter: include line_number
+ * f_pint - prints the top
+ * @head: stack head
+ * @counter: line_number
  * Return: no return
 */
 void f_pint(stack_t **head, unsigned int counter)
@@ -17,4 +17,3 @@ void f_pint(stack_t **head, unsigned int counter)
 	}
 	printf("%d\n", (*head)->n);
 }
-

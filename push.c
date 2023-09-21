@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * f_push - addition of node to the stack
- * @head: include stack head
- * @counter: include line_number
+ * f_push - add node to the stack
+ * @head: stack head
+ * @counter: line_number
  * Return: no return
 */
 void f_push(stack_t **head, unsigned int counter)
@@ -35,4 +35,3 @@ void f_push(stack_t **head, unsigned int counter)
 	else
 		addqueue(head, n);
 }
-

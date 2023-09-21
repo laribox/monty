@@ -1,9 +1,9 @@
 #include "monty.h"
 /**
- * f_pchar - printing the character at the top of the stack,
- * new line should be followed afterword
- * @head: stack head included
- * @counter: line_number included
+ * f_pchar - prints the char at the top of the stack,
+ * followed by a new line
+ * @head: stack head
+ * @counter: line_number
  * Return: no return
 */
 void f_pchar(stack_t **head, unsigned int counter)
@@ -29,4 +29,3 @@ void f_pchar(stack_t **head, unsigned int counter)
 	}
 	printf("%c\n", h->n);
 }
-
