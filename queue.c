@@ -9,7 +9,7 @@ void f_queue(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;
-	pv.mode = 1;
+	bus.lifi = 1;
 }
 
 /**
