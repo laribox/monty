@@ -1,19 +1,20 @@
 #include "monty.h"
 pro_args pa = {NULL, NULL, NULL, 0};
 /**
-* main - monty code interpreter
+* main - start of theprogrma
 * @argc: number of arguments
-* @argv: monty file location
+* @argv: arguments
 * Return: 0 on success
 */
 int main(int argc, char *argv[])
 {
+	unsigned int counter = 0;
 	char *content;
 	FILE *file;
-	size_t size = 0;
 	ssize_t read_line = 1;
+	size_t size = 0;
 	stack_t *stack = NULL;
-	unsigned int counter = 0;
+
 
 	if (argc != 2)
 	{
