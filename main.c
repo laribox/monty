@@ -1,13 +1,15 @@
 #include "monty.h"
-
 /**
- * main - starting point  of the program
+ * main - entry point
  * @argc: number of arguments
  * @argv: the arguments
- * Return: 0 on  success else error set appropriately
+ * Return: 0(success) else error set appropriately
  */
 int main(int argc, char **argv)
 {
-	check_args(argc);
+
+	arguments(argc);
+	interpretor(argv[1]);
+
 	return (0);
 }

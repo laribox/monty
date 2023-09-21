@@ -1,10 +1,12 @@
 #ifndef _MONTY_H
 #define _MONTY_H
 
+#define _GNU_SOURCE
+
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include <unistd.h>
+#include <string.h>
 #include <ctype.h>
 #include <fcntl.h>
 
@@ -38,9 +40,33 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void check_args(int argc);
-void push(stack_t **stack, unsigned int element);
-void pall(stack_t **stack, unsigned int element);
-void pint(stack_t **stack, unsigned int element);
-void pop(stack_t **stack, unsigned int element);
-void free_stack(stack_t *head);
+/**
+ * struct cmd_t - file and its content
+ * @fd: file descriptor
+ * @line: the line of the file
+ */
+typedef struct cmd_s
+{
+	FILE *fd;
+	char *line;
+} cmd_t;
+
+extern cmd_t cmd;
+
+void arguments(int argc);
+stack_t *newnode(int i);
+void push(stack_t **stack, unsigned int line);
+void pall(stack_t **stack, unsigned int line);
+void pint(stack_t **stack, unsigned int line);
+void pop(stack_t **stack, unsigned int line);
+extern int num;
+void free_stack(stack_t *stack);
+void clean_stack(stack_t **stack);
+void interpretor(char *argv);
+int get_opc(stack_t **stack, char *arg, char *val, int line_number);
+void open_error(char *file);
+void push_error(FILE *fd, char *line, stack_t *stack, int line_number);
+void instr_error(FILE *fd, char *line, stack_t *stack, char *val, int line_n);
+int _isdigit(char *c);
+
+#endif
