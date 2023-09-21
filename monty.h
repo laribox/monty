@@ -53,6 +53,7 @@ typedef struct pro_val
 }  pro_v;
 extern pro_v pv;
 
+
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
@@ -63,7 +64,7 @@ int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void free_stack(stack_t *head);
 void f_pop(stack_t **head, unsigned int counter);
 void f_swap(stack_t **head, unsigned int counter);
-void f_add(stack_t **head, unsigned int counter);
+void add(stack_t **head, unsigned int counter);
 void f_nop(stack_t **head, unsigned int counter);
 void f_sub(stack_t **head, unsigned int counter);
 void f_div(stack_t **head, unsigned int counter);
