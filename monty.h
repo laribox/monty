@@ -64,7 +64,7 @@ int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void free_stack(stack_t *head);
 
 void sub(stack_t **head, unsigned int counter);
-void div(stack_t **head, unsigned int counter);
+void div_s(stack_t **head, unsigned int counter);
 void mul(stack_t **head, unsigned int counter);
 void mod(stack_t **head, unsigned int counter);
 
