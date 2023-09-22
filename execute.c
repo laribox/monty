@@ -9,12 +9,11 @@
  */
 int parse_line(char *content, char **op, char **arg)
 {
-    *op = strtok(content, " \n\t");
-    if (*op && (*op)[0] == '#')
-        return (0);
-
-    *arg = strtok(NULL, " \n\t");
-    return (*op != NULL);
+  	*op = strtok(content, " \n\t");
+	if (*op && (*op)[0] == '#')
+	  	return (0);	
+	*arg = strtok(NULL, " \n\t");
+	return (*op != NULL);
 }
 
 /**
