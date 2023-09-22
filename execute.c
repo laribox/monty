@@ -25,7 +25,7 @@ int parse_line(char *content, char **op, char **arg)
  * @file: pointer to monty file
  */
 void execute_opcode(char *op, char *arg, stack_t **stack,
-								unsigned int counter, FILE *file)
+		unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
 		{"push", push},
@@ -52,17 +52,17 @@ void execute_opcode(char *op, char *arg, stack_t **stack,
 				fclose(file);
 				free_stack(*stack);
 				exit(EXIT_FAILURE);
-            }
-            opst[i].f(stack, counter);
-            return;
-        }
-        i++;
-    }
+			}
+			opst[i].f(stack, counter);
+			return;
+		}
+		i++;
+	}
 
-    fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
-    fclose(file);
-    free_stack(*stack);
-    exit(EXIT_FAILURE);
+	fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
+	fclose(file);
+	free_stack(*stack);
+	exit(EXIT_FAILURE);
 }
 
 /**
@@ -75,11 +75,11 @@ void execute_opcode(char *op, char *arg, stack_t **stack,
  */
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
-    char *op, *arg;
+	char *op, *arg;
 
-    if (!parse_line(content, &op, &arg))
-        return (0);
+	if (!parse_line(content, &op, &arg))
+		return (0);
 
-    execute_opcode(op, arg, stack, counter, file);
-    return (0);
+	execute_opcode(op, arg, stack, counter, file);
+	return (0);
 }
