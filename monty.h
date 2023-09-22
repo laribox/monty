@@ -59,18 +59,14 @@ void pop(stack_t **head, unsigned int counter);
 void swap(stack_t **head, unsigned int counter);
 void add(stack_t **head, unsigned int counter);
 void nop(stack_t **head, unsigned int counter);
+void addnode(stack_t **head, int n);
 
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
-int parse_line(char *content, char **op, char **arg);
-void execute_opcode(char *op, char *arg, stack_t **stack, unsigned int counter, FILE *file);
-
 void free_stack(stack_t *head);
 
 void sub(stack_t **head, unsigned int counter);
 void div_s(stack_t **head, unsigned int counter);
 void mul(stack_t **head, unsigned int counter);
 void mod(stack_t **head, unsigned int counter);
-
-void addnode(stack_t **head, int n);
 
 #endif
