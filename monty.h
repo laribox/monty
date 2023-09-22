@@ -61,6 +61,9 @@ void add(stack_t **head, unsigned int counter);
 void nop(stack_t **head, unsigned int counter);
 
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
+int parse_line(char *content, char **op, char **arg);
+void execute_opcode(char *op, char *arg, stack_t **stack, unsigned int counter, FILE *file);
+
 void free_stack(stack_t *head);
 
 void sub(stack_t **head, unsigned int counter);
