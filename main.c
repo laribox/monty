@@ -1,5 +1,5 @@
 #include "monty.h"
-pro_args pa = {NULL, NULL, NULL, 0};
+pro_args pa = {NULL, NULL, NULL};
 /**
 * main - start of theprogrma
 * @argc: number of arguments
