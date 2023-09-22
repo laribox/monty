@@ -1,9 +1,9 @@
 #include "monty.h"
+
 /**
-  *nop- nothing
-  *@head: stack head
+  *nop - does nothing
+  *@head: pointer to the top of stack
   *@counter: line_number
-  *Return: no return
  */
 void nop(stack_t **head, unsigned int counter)
 {

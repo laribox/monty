@@ -7,13 +7,13 @@
 */
 void swap(stack_t **head, unsigned int counter)
 {
-	stack_t *h;
-	int len = 0, aux;
+	stack_t *tmp;
+	int len = 0, n;
 
-	h = *head;
-	while (h)
+	tmp = *head;
+	while (tmp)
 	{
-		h = h->next;
+		tmp = tmp->next;
 		len++;
 	}
 	if (len < 2)
@@ -24,8 +24,8 @@ void swap(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	aux = h->n;
-	h->n = h->next->n;
-	h->next->n = aux;
+	tmp = *head;
+	n = tmp->n;
+	tmp->n = tmp->next->n;
+	tmp->next->n = n;
 }

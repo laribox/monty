@@ -38,19 +38,16 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct program_args - variables -args, file, line content
+ * struct program_args - program data
  * @arg: value
  * @file: pointer to monty file
  * @content: line content
- * @mode: flag change stack <-> queue
- * Description: carries values through the program
  */
 typedef struct program_args
 {
 	char *arg;
 	FILE *file;
 	char *content;
-	int mode;
 }  pro_args;
 extern pro_args pa;
 
