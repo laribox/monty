@@ -11,7 +11,7 @@ int parse_line(char *content, char **op, char **arg)
 {
 	*op = strtok(content, " \n\t");
 	if (*op && (*op)[0] == '#')
-		return (0);	
+		return (0);
 	*arg = strtok(NULL, " \n\t");
 	return (*op != NULL);
 }
@@ -24,7 +24,8 @@ int parse_line(char *content, char **op, char **arg)
  * @counter: line_counter
  * @file: pointer to monty file
  */
-void execute_opcode(char *op, char *arg, stack_t **stack, unsigned int counter, FILE *file)
+void execute_opcode(char *op, char *arg, stack_t **stack,
+								unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
 		{"push", push},
